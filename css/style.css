@@ -42,12 +42,12 @@ tr:nth-child(even) td:nth-child(even) {
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 70vw;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
   }
-  
+
   .modal-content {
     background-color: #fefefe;
     margin: 10% auto;
@@ -55,6 +55,10 @@ tr:nth-child(even) td:nth-child(even) {
     border: 1px solid #888;
     width: 40%;
     border-radius: 20px;
+  }
+
+  .modal-content img {
+    max-width: 50vw;
   }
 }
 
