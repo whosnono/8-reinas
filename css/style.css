@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 table {
   border-collapse: collapse;
   outline: 1vw solid #6a6972;
@@ -36,19 +36,19 @@ tr:nth-child(even) td:nth-child(even) {
     outline: 4vw solid #4f4d5a;
     margin: 6vh auto;
   }
-  
+
   .modal {
     display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 70vw;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
   }
-  
+
   .modal-content {
     background-color: #fefefe;
     margin: 10% auto;
@@ -57,6 +57,11 @@ tr:nth-child(even) td:nth-child(even) {
     width: 40%;
     border-radius: 20px;
   }
+
+  .modal-content img {
+    max-width: 50vw;
+  }
+
 }
 
 p {
@@ -64,15 +69,15 @@ p {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-#h21{
+#h21 {
   text-align: center;
   font-size: 22px;
   font-family: 'Roboto', sans-serif;
 }
 
-#h22{
+#h22 {
   text-align: center;
-  margin-right:  10%;
+  margin-right: 10%;
   margin-left: 10%;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
@@ -129,7 +134,7 @@ button:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
