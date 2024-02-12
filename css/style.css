@@ -58,7 +58,7 @@ tr:nth-child(even) td:nth-child(even) {
   }
 
   .modal-content img {
-    max-width: 50vw;
+    max-width: auto;
   }
 }
 
