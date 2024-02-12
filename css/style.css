@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+table {
+  border-collapse: collapse;
+  outline: 1vw solid #6a6972;
+  margin: 5vh auto;
+  width: 31vw;
+  height: 31vw;
+}
+
+tr,
+td {
+  border: none;
+}
+
+td {
+  cursor: pointer;
+  height: 5%;
+  width: 5%;
+}
+
+tr:nth-child(even) td:nth-child(odd),
+tr:nth-child(odd) td:nth-child(even) {
+  background-color: #795F9C;
+}
+
+tr:nth-child(odd) td:nth-child(odd),
+tr:nth-child(even) td:nth-child(even) {
+  background-color: #E7CF93
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+    width: 80vw;
+    height: 80vw;
+    outline: 4vw solid #4f4d5a;
+    margin: 6vh auto;
+  }
+}
+
+p {
+  text-align: center;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+#h21{
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#h22{
+  text-align: center;
+  margin-right:  10%;
+  margin-left: 10%;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+td.celda {
+  background-image: none;
+}
+
+td.celda:hover {
+  filter: brightness(50%);
+}
+
+td.celdaConReina {
+  background-image: url(../img/reina.png);
+  background-size: cover;
+}
+
+td.celdaInactiva {
+  background-image: url(../img/error.png);
+  background-size: cover;
+  pointer-events: none;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  background: #795F9C;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #E7CF93;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#congratulations {
+  text-align: center;
+}
+
+#congratulations p {
+  color: #000000;
+  font: italic normal 400 normal 25px/22px Arial, Verdana, sans-serif;
+}
