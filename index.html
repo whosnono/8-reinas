@@ -1,1 +1,117 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Document</title><link rel="stylesheet" href="css/style.css"><script src="./js/funciones.js"></script></head><body><h2 id="h21">Simulación del juego del las 8 reinas</h2><h2 id="h22">El juego de las ocho reinas es un rompecabezas clásico que se juega en un tablero de ajedrez. El objetivo es colocar ocho reinas en un tablero de ajedrez de 8x8 sin que se amenacen entre sí. En el ajedrez, una reina puede moverse horizontalmente, verticalmente y en diagonal.</h2><table id="tablero"><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr><tr><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td><td class="celda" onclick="colocarReina(this)"></td></tr></table><p id="contadorDeMovimientos"><b>0</b>reina(s) colocada(s).<b>8</b>movimiento(s) restante(s).</p><button class="botonReinicio" onclick="reiniciarJuego()">Reiniciar</button><div id="congratulations" class="modal"><div class="modal-content"><span class="close">&times;</span><img src="./img/felicidades.gif" alt="GIF" width="400"><p>Has encontrado una solucion.</p><button id="botonReinicioM">Reiniciar</button></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/funciones.js"></script>
+</head>
+
+
+<body>
+    <h2 id="h21">Simulación del juego del las 8 reinas</h2>
+    <h2 id="h22"> El juego de las ocho reinas es un rompecabezas clásico que se juega en un tablero de ajedrez.
+        El objetivo es colocar ocho reinas en un tablero de ajedrez de 8x8 sin que se amenacen entre
+        sí. En el ajedrez, una reina puede moverse horizontalmente, verticalmente y en diagonal.</h2>
+    <table id="tablero">
+        
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+        <tr>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+            <td class="celda" onclick="colocarReina(this)"></td>
+        </tr>
+    </table>
+
+    <p id="contadorDeMovimientos"><b>0</b> reina(s) colocada(s). <b>8</b> movimiento(s) restante(s).
+    </p>
+
+    <button class="botonReinicio" onclick="reiniciarJuego()">Reiniciar</button>
+
+    <div id="congratulations" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="./img/felicidades.gif" alt="GIF" width="400">
+            <p>Has encontrado una solucion.</p>
+            <button id="botonReinicioM">Reiniciar</button>
+        </div>
+    </div>
+</body>
+
+</html>
